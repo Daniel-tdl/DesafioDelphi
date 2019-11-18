@@ -8,6 +8,7 @@ uses
 
 type
   TfrmDesafio3 = class(TForm)
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -20,8 +21,18 @@ var
 implementation
 
 uses
-  uFrame;
+  uFrame, uBotao;
 
 {$R *.dfm}
+
+procedure TfrmDesafio3.FormCreate(Sender: TObject);
+var
+  oBotao: TBotao;
+  oFrame: TFrame;
+begin
+  oBotao := TBotao.Create(self);
+  oBotao.Parent := Self;
+  oBotao.Visible := True;
+end;
 
 end.

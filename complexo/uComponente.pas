@@ -3,7 +3,7 @@ unit uComponente;
 interface
 
 uses
-  Vcl.Controls;
+  Vcl.Controls, Vcl.Graphics, system.SysUtils, System.Classes;
 
 type
 
@@ -11,14 +11,18 @@ type
 
   TComponenteArray = array of TComponente;
 
-  TComponente = class(TWinControl)
+  TComponente = class(TGraphicControl)
   private
     FX: Integer;
     FY: Integer;
     FAltura: Integer;
     FLargura: Integer;
     FComponentes: TComponenteArray;
+  protected
+    procedure Paint; override;
   public
+    constructor Create(AOwner: TComponent); override;
+
     procedure AdicionaComponente(aComponente: TComponente); virtual;
     procedure RemoveComponente(aComponente: TComponente); virtual;
     procedure SetarComportamento; virtual;
@@ -32,6 +36,21 @@ implementation
 procedure TComponente.AdicionaComponente(aComponente: TComponente);
 begin
   Self.InsertComponent(aComponente);
+end;
+
+constructor TComponente.Create(AOwner: TComponent);
+begin
+  inherited Create(AOwner);
+
+  Self.Height := 25;
+  Self.Width  := 75;
+
+  Invalidate;
+end;
+
+procedure TComponente.Paint;
+begin
+  inherited;
 end;
 
 procedure TComponente.RemoveComponente(aComponente: TComponente);
