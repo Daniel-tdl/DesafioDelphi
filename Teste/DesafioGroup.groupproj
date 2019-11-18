@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{43045BF1-5D39-439C-85DA-331415ABC5C9}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="TesteDesafio.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\simples\QS6.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="TesteDesafio">
+        <MSBuild Projects="TesteDesafio.dproj"/>
+    </Target>
+    <Target Name="TesteDesafio:Clean">
+        <MSBuild Projects="TesteDesafio.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="TesteDesafio:Make">
+        <MSBuild Projects="TesteDesafio.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="QS6">
+        <MSBuild Projects="..\simples\QS6.dproj"/>
+    </Target>
+    <Target Name="QS6:Clean">
+        <MSBuild Projects="..\simples\QS6.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="QS6:Make">
+        <MSBuild Projects="..\simples\QS6.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="TesteDesafio;QS6"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="TesteDesafio:Clean;QS6:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="TesteDesafio:Make;QS6:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

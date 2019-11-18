@@ -1,0 +1,5 @@
+/.vs
+/.git
+/*.exe
+*/Win32
+*/__history
