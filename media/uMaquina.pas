@@ -10,7 +10,8 @@ type
   private
     FbAuterouValor: Boolean;
     function RetornarObjTrocoLista(const ALista: TList; ACedula: TCedula): TTroco;
-    procedure AdicionarTroco(var oValor: Double; ACedula: TCedula; ALista: TList);
+    function AdicionarTroco(var oValor: Double; ACedula: TCedula; ALista: TList):
+        Boolean;
   public
     function MontarTroco(aTroco: Double): TList;
   end;
@@ -25,38 +26,27 @@ begin
   Result := TList.Create;
   while oValor > 0 do
   begin
-    AdicionarTroco(oValor,ceNota100, Result);
-    if FbAuterouValor then
+    if AdicionarTroco(oValor,ceNota100, Result) then
       Continue;
-    AdicionarTroco(oValor,ceNota50, Result);
-    if FbAuterouValor then
+    if AdicionarTroco(oValor,ceNota50, Result) then
       Continue;
-    AdicionarTroco(oValor,ceNota20, Result);
-    if FbAuterouValor then
+    if AdicionarTroco(oValor,ceNota20, Result) then
       Continue;
-    AdicionarTroco(oValor,ceNota10, Result);
-    if FbAuterouValor then
+    if AdicionarTroco(oValor,ceNota10, Result)then
       Continue;
-    AdicionarTroco(oValor,ceNota5, Result);
-    if FbAuterouValor then
+    if AdicionarTroco(oValor,ceNota5, Result)then
       Continue;
-    AdicionarTroco(oValor,ceNota2, Result);
-    if FbAuterouValor then
+    if AdicionarTroco(oValor,ceNota2, Result)then
       Continue;
-    AdicionarTroco(oValor,ceMoeda100, Result);
-    if FbAuterouValor then
+    if AdicionarTroco(oValor,ceMoeda100, Result)then
       Continue;
-    AdicionarTroco(oValor,ceMoeda50, Result);
-    if FbAuterouValor then
+    if AdicionarTroco(oValor,ceMoeda50, Result)then
       Continue;
-    AdicionarTroco(oValor,ceMoeda25, Result);
-    if FbAuterouValor then
+    if AdicionarTroco(oValor,ceMoeda25, Result)then
       Continue;
-    AdicionarTroco(oValor,ceMoeda10, Result);
-    if FbAuterouValor then
+    if AdicionarTroco(oValor,ceMoeda10, Result)then
       Continue;
-    AdicionarTroco(oValor,ceMoeda5, Result);
-    if FbAuterouValor then
+    if AdicionarTroco(oValor,ceMoeda5, Result)then
       Continue;
     AdicionarTroco(oValor,ceMoeda1, Result);
   end;
@@ -83,19 +73,19 @@ begin
   ALista.Add(Result);
 end;
 
-procedure TMaquina.AdicionarTroco(var oValor: Double; ACedula: TCedula; ALista: TList);
+function TMaquina.AdicionarTroco(var oValor: Double; ACedula: TCedula; ALista: TList): Boolean;
 var
   oTroco: TTroco;
 begin
-  FbAuterouValor := False;;
+  Result := False;
   if oValor < CValorCedula[ACedula] then
     Exit;
 
   oTroco := RetornarObjTrocoLista(ALista, ACedula);
   oTroco.Quantidade := oTroco.Quantidade + 1;
   oValor := oValor - CValorCedula[ACedula];
-  oValor := StrToFloat(FormatFloat('#.##0,00',oValor));
-  FbAuterouValor := True;
+  oValor := StrToFloat(FormatFloat('###0,00',oValor).Replace('.', EmptyStr));
+  Result := True;
 end;
 
 end.
