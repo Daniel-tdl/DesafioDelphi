@@ -48,9 +48,12 @@ type
     dfValor: TMaskEdit;
     btnCalcularTroco: TButton;
     mmoSaidaTroco: TMemo;
+    btnDesafio3: TButton;
+    liDesafio3: TdxLayoutItem;
     procedure btnCalcularTrocoClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure btnDesafio1Click(Sender: TObject);
+    procedure btnDesafio3Click(Sender: TObject);
   private
     procedure DestruirObjetosListas(const ALista: TList);
     procedure InformarTroco(const ALista: TList);
@@ -67,7 +70,8 @@ implementation
 
 uses
   uSubstitui, uISubstitui, uExcessaoSimples,
-  uIMaquina, uMaquina, uTroco, uTrocoHelper;
+  uIMaquina, uMaquina, uTroco, uTrocoHelper,
+  uTesteDesafio3;
 
 {$R *.dfm}
 
@@ -124,6 +128,18 @@ begin
       ShowMessage(E.Message);
     on E :  Exception do
       ShowMessage(C_ERRO_INESPERADO) ;
+  end;
+end;
+
+procedure TForm1.btnDesafio3Click(Sender: TObject);
+var
+  oDesafio3: TfrmDesafio3;
+begin
+  oDesafio3 := TfrmDesafio3.Create(nil);
+  try
+    oDesafio3.ShowModal;
+  finally
+    FreeAndNil(oDesafio3);
   end;
 end;
 

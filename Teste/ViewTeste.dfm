@@ -139,6 +139,15 @@ object Form1: TForm1
         TabOrder = 1
       end
     end
+    object btnDesafio3: TButton
+      Left = 10
+      Top = 404
+      Width = 627
+      Height = 25
+      Caption = 'Desafio 3'
+      TabOrder = 6
+      OnClick = btnDesafio3Click
+    end
     object lgRoot: TdxLayoutGroup
       AlignHorz = ahClient
       AlignVert = avClient
@@ -224,6 +233,16 @@ object Form1: TForm1
       ControlOptions.OriginalWidth = 603
       ControlOptions.ShowBorder = False
       Index = 0
+    end
+    object liDesafio3: TdxLayoutItem
+      Parent = lgRoot
+      CaptionOptions.Text = 'Button1'
+      CaptionOptions.Visible = False
+      Control = btnDesafio3
+      ControlOptions.OriginalHeight = 25
+      ControlOptions.OriginalWidth = 75
+      ControlOptions.ShowBorder = False
+      Index = 2
     end
   end
 end

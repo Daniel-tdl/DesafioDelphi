@@ -5,8 +5,8 @@
     <Transaction>2019/11/17 20:25:34.000.559,C:\Users\daniel\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Daniel\Pessoal\GitHub\DesafioDelphi\Teste\ViewTeste.pas</Transaction>
     <Transaction>2019/11/17 20:25:34.000.559,C:\Users\daniel\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Daniel\Pessoal\GitHub\DesafioDelphi\Teste\ViewTeste.dfm</Transaction>
     <Transaction>2019/11/17 20:25:48.000.291,C:\Users\daniel\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Daniel\Pessoal\GitHub\DesafioDelphi\Teste\TesteDesafio.dproj</Transaction>
-    <Transaction>2019/11/17 20:28:01.000.838,=C:\Daniel\Pessoal\GitHub\DesafioDelphi\simples\uSubstitui.pas</Transaction>
     <Transaction>2019/11/17 20:28:01.000.807,=C:\Daniel\Pessoal\GitHub\DesafioDelphi\simples\uISubstitui.pas</Transaction>
+    <Transaction>2019/11/17 20:28:01.000.838,=C:\Daniel\Pessoal\GitHub\DesafioDelphi\simples\uSubstitui.pas</Transaction>
     <Transaction>2019/11/17 21:02:21.000.085,=C:\Daniel\Pessoal\GitHub\DesafioDelphi\Teste\Unit1.pas</Transaction>
     <Transaction>2019/11/17 21:06:18.000.351,=C:\Daniel\Pessoal\GitHub\DesafioDelphi\simples\uExcessaoSimples.pas</Transaction>
     <Transaction>2019/11/17 23:21:26.976,=C:\Daniel\Pessoal\GitHub\DesafioDelphi\Teste\Unit2.pas</Transaction>
@@ -21,5 +21,16 @@
     <Transaction>2019/11/18 01:05:27.004,C:\Daniel\Pessoal\GitHub\DesafioDelphi\media\uTrocoHelper.pas=</Transaction>
     <Transaction>2019/11/18 01:07:44.204,=C:\Daniel\Pessoal\GitHub\DesafioDelphi\media\uCedulaHelper.pas</Transaction>
     <Transaction>2019/11/18 01:07:44.236,=C:\Daniel\Pessoal\GitHub\DesafioDelphi\media\uTrocoHelper.pas</Transaction>
+    <Transaction>2019/11/18 04:17:37.632,=C:\Daniel\Pessoal\GitHub\DesafioDelphi\Teste\Unit1.pas</Transaction>
+    <Transaction>2019/11/18 04:54:12.028,=C:\Daniel\Pessoal\GitHub\DesafioDelphi\Teste\Unit2.pas</Transaction>
+    <Transaction>2019/11/18 04:59:33.596,=C:\Daniel\Pessoal\GitHub\DesafioDelphi\complexo\uBotao.pas</Transaction>
+    <Transaction>2019/11/18 04:59:33.625,=C:\Daniel\Pessoal\GitHub\DesafioDelphi\complexo\uComponente.pas</Transaction>
+    <Transaction>2019/11/18 04:59:33.655,=C:\Daniel\Pessoal\GitHub\DesafioDelphi\complexo\uExcecaoComplexo.pas</Transaction>
+    <Transaction>2019/11/18 04:59:33.685,=C:\Daniel\Pessoal\GitHub\DesafioDelphi\complexo\uFrame.pas</Transaction>
+    <Transaction>2019/11/18 04:59:33.716,=C:\Daniel\Pessoal\GitHub\DesafioDelphi\complexo\uLabel.pas</Transaction>
+    <Transaction>2019/11/18 04:59:33.747,=C:\Daniel\Pessoal\GitHub\DesafioDelphi\complexo\uMemo.pas</Transaction>
+    <Transaction>2019/11/18 05:02:25.495,=C:\Daniel\Pessoal\GitHub\DesafioDelphi\Teste\Unit2.pas</Transaction>
+    <Transaction>2019/11/18 05:02:58.833,C:\Daniel\Pessoal\GitHub\DesafioDelphi\Teste\uTesteDesafio3.dfm=C:\Daniel\Pessoal\GitHub\DesafioDelphi\Teste\Unit2.dfm</Transaction>
+    <Transaction>2019/11/18 05:02:58.833,C:\Daniel\Pessoal\GitHub\DesafioDelphi\Teste\uTesteDesafio3.pas=C:\Daniel\Pessoal\GitHub\DesafioDelphi\Teste\Unit2.pas</Transaction>
   </Transactions>
 </BorlandProject>

@@ -12,6 +12,9 @@
         <Projects Include="..\media\QS7.dproj">
             <Dependencies/>
         </Projects>
+        <Projects Include="..\complexo\QC2.dproj">
+            <Dependencies/>
+        </Projects>
     </ItemGroup>
     <ProjectExtensions>
         <Borland.Personality>Default.Personality.12</Borland.Personality>
@@ -47,14 +50,23 @@
     <Target Name="QS7:Make">
         <MSBuild Projects="..\media\QS7.dproj" Targets="Make"/>
     </Target>
+    <Target Name="QC2">
+        <MSBuild Projects="..\complexo\QC2.dproj"/>
+    </Target>
+    <Target Name="QC2:Clean">
+        <MSBuild Projects="..\complexo\QC2.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="QC2:Make">
+        <MSBuild Projects="..\complexo\QC2.dproj" Targets="Make"/>
+    </Target>
     <Target Name="Build">
-        <CallTarget Targets="TesteDesafio;QS6;QS7"/>
+        <CallTarget Targets="TesteDesafio;QS6;QS7;QC2"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="TesteDesafio:Clean;QS6:Clean;QS7:Clean"/>
+        <CallTarget Targets="TesteDesafio:Clean;QS6:Clean;QS7:Clean;QC2:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="TesteDesafio:Make;QS6:Make;QS7:Make"/>
+        <CallTarget Targets="TesteDesafio:Make;QS6:Make;QS7:Make;QC2:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>
