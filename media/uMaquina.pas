@@ -8,7 +8,7 @@ uses
 type
   TMaquina = class(TInterfacedObject, IMaquina)
   private
-    FbAuterouValor: Boolean;
+//    FbAuterouValor: Boolean;
     function RetornarObjTrocoLista(const ALista: TList; ACedula: TCedula): TTroco;
     function AdicionarTroco(var oValor: Double; ACedula: TCedula; ALista: TList):
         Boolean;
@@ -21,34 +21,17 @@ implementation
 function TMaquina.MontarTroco(aTroco: Double): TList;
 var
   oValor: Double;
+  oCedulas: TCedula;
 begin
   oValor := aTroco;
   Result := TList.Create;
   while oValor > 0 do
   begin
-    if AdicionarTroco(oValor,ceNota100, Result) then
-      Continue;
-    if AdicionarTroco(oValor,ceNota50, Result) then
-      Continue;
-    if AdicionarTroco(oValor,ceNota20, Result) then
-      Continue;
-    if AdicionarTroco(oValor,ceNota10, Result)then
-      Continue;
-    if AdicionarTroco(oValor,ceNota5, Result)then
-      Continue;
-    if AdicionarTroco(oValor,ceNota2, Result)then
-      Continue;
-    if AdicionarTroco(oValor,ceMoeda100, Result)then
-      Continue;
-    if AdicionarTroco(oValor,ceMoeda50, Result)then
-      Continue;
-    if AdicionarTroco(oValor,ceMoeda25, Result)then
-      Continue;
-    if AdicionarTroco(oValor,ceMoeda10, Result)then
-      Continue;
-    if AdicionarTroco(oValor,ceMoeda5, Result)then
-      Continue;
-    AdicionarTroco(oValor,ceMoeda1, Result);
+    for oCedulas := ceNota100 to ceMoeda1 do
+    begin
+      if AdicionarTroco(oValor,oCedulas, Result) then
+        Break;
+    end;
   end;
 end;
 
@@ -84,7 +67,7 @@ begin
   oTroco := RetornarObjTrocoLista(ALista, ACedula);
   oTroco.Quantidade := oTroco.Quantidade + 1;
   oValor := oValor - CValorCedula[ACedula];
-  oValor := StrToFloat(FormatFloat('###0,00',oValor).Replace('.', EmptyStr));
+  oValor := StrToFloat(FormatFloat('###0.00',oValor));
   Result := True;
 end;
 
