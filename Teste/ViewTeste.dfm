@@ -2,8 +2,8 @@ object Form1: TForm1
   Left = 0
   Top = 0
   Caption = 'Form1'
-  ClientHeight = 233
-  ClientWidth = 637
+  ClientHeight = 439
+  ClientWidth = 647
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -17,18 +17,14 @@ object Form1: TForm1
   object lgGrupo: TdxLayoutControl
     Left = 0
     Top = 0
-    Width = 637
-    Height = 233
+    Width = 647
+    Height = 439
     Align = alClient
     TabOrder = 0
-    ExplicitLeft = 232
-    ExplicitTop = 72
-    ExplicitWidth = 300
-    ExplicitHeight = 250
     object btnDesafio1: TButton
       Left = 22
       Top = 164
-      Width = 593
+      Width = 603
       Height = 25
       Caption = 'Substituir'
       TabOrder = 4
@@ -37,7 +33,7 @@ object Form1: TForm1
     object mmoTextoOriginal: TMemo
       Left = 24
       Top = 30
-      Width = 589
+      Width = 599
       Height = 43
       BevelInner = bvNone
       BevelKind = bkFlat
@@ -50,7 +46,7 @@ object Form1: TForm1
     object mmoTextoSubst: TMemo
       Left = 24
       Top = 110
-      Width = 589
+      Width = 599
       Height = 46
       BevelInner = bvNone
       BevelKind = bkFlat
@@ -63,7 +59,7 @@ object Form1: TForm1
     object edtStringVelha: TEdit
       Left = 107
       Top = 83
-      Width = 224
+      Width = 234
       Height = 17
       BevelInner = bvNone
       BevelKind = bkFlat
@@ -73,7 +69,7 @@ object Form1: TForm1
       Text = 'edtStringVelha'
     end
     object edtStringNova: TEdit
-      Left = 392
+      Left = 402
       Top = 83
       Width = 221
       Height = 17
@@ -83,6 +79,65 @@ object Form1: TForm1
       BorderStyle = bsNone
       TabOrder = 2
       Text = 'edtStringNova'
+    end
+    object pnl1: TPanel
+      Left = 22
+      Top = 225
+      Width = 603
+      Height = 161
+      Caption = 'pnl1'
+      TabOrder = 5
+      object pnl2: TPanel
+        Left = 1
+        Top = 1
+        Width = 601
+        Height = 32
+        Align = alTop
+        Caption = 'pnl2'
+        TabOrder = 0
+        DesignSize = (
+          601
+          32)
+        object lbl1: TLabel
+          Left = 16
+          Top = 8
+          Width = 78
+          Height = 13
+          Caption = 'Informar o valor'
+        end
+        object dfValor: TMaskEdit
+          Left = 104
+          Top = 5
+          Width = 345
+          Height = 21
+          Anchors = [akLeft, akRight]
+          EditMask = '###0,00;1;_'
+          MaxLength = 7
+          TabOrder = 0
+          Text = '    ,  '
+        end
+        object btnCalcularTroco: TButton
+          Left = 473
+          Top = 1
+          Width = 127
+          Height = 30
+          Align = alRight
+          Caption = 'Calcular troco'
+          TabOrder = 1
+          OnClick = btnCalcularTrocoClick
+        end
+      end
+      object mmoSaidaTroco: TMemo
+        Left = 1
+        Top = 33
+        Width = 601
+        Height = 127
+        Align = alClient
+        Lines.Strings = (
+          'mmoSaidaTroco')
+        ScrollBars = ssVertical
+        TabOrder = 1
+      end
     end
     object lgRoot: TdxLayoutGroup
       AlignHorz = ahClient
@@ -148,6 +203,27 @@ object Form1: TForm1
       LayoutDirection = ldHorizontal
       Index = 1
       AutoCreated = True
+    end
+    object lgDesafio2: TdxLayoutGroup
+      Parent = lgRoot
+      AlignHorz = ahClient
+      AlignVert = avTop
+      CaptionOptions.Text = 'Desafio2'
+      ButtonOptions.Buttons = <>
+      LayoutDirection = ldHorizontal
+      Index = 1
+    end
+    object liDesafio2: TdxLayoutItem
+      Parent = lgDesafio2
+      AlignHorz = ahClient
+      AlignVert = avClient
+      CaptionOptions.Visible = False
+      Control = pnl1
+      ControlOptions.AutoColor = True
+      ControlOptions.OriginalHeight = 161
+      ControlOptions.OriginalWidth = 603
+      ControlOptions.ShowBorder = False
+      Index = 0
     end
   end
 end

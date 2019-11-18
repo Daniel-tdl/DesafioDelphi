@@ -1,5 +1,5 @@
 /.vs
 /.git
-/*.exe
+*.exe
 */Win32
 */__history

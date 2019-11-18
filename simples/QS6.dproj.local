@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
-  <Transactions>
-    <Transaction>2019/11/17 21:02:44.546,=C:\Daniel\Pessoal\GitHub\DesafioDelphi\simples\Unit1.pas</Transaction>
-    <Transaction>2019/11/17 21:03:00.831,C:\Daniel\Pessoal\GitHub\DesafioDelphi\simples\uExcessaoSimples.pas=C:\Daniel\Pessoal\GitHub\DesafioDelphi\simples\Unit1.pas</Transaction>
+	<Transactions>
+    <Transaction>2019/11/17 21:02:44.000.546,=C:\Daniel\Pessoal\GitHub\DesafioDelphi\simples\Unit1.pas</Transaction>
+    <Transaction>2019/11/17 21:03:00.000.831,C:\Daniel\Pessoal\GitHub\DesafioDelphi\simples\Unit1.pas=C:\Daniel\Pessoal\GitHub\DesafioDelphi\simples\uExcessaoSimples.pas</Transaction>
   </Transactions>
 </BorlandProject>
